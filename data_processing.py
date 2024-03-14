@@ -117,5 +117,5 @@ X_val_prepared_2 = preprocessor_2.transform(X_val)
 #numerical feature - Iterative interpolation
 #Category - Impute missing values with the most frequent
 # too slow
-X_train_prepared_3 = preprocessor_3.fit_transform(X_train)
-X_val_prepared_3 = preprocessor_3.transform(X_val)
+# X_train_prepared_3 = preprocessor_3.fit_transform(X_train)
+# X_val_prepared_3 = preprocessor_3.transform(X_val)
