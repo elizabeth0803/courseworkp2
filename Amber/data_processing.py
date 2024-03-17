@@ -10,17 +10,16 @@ from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer
 from sklearn.ensemble import RandomForestRegressor
 
-
-
-# dadadfdfds
 #Three methods of handling missing values
 # Load the dataset
-train_df = pd.read_csv('train.csv')
+train_df = pd.read_csv('../train.csv')
 train_df = train_df.fillna(np.nan)
 
 # Simulate missing values in 5% of the dataset
 for col in train_df.columns:
-    train_df.loc[train_df.sample(frac=0.05).index, col] = pd.NA
+    if col != 'Status':
+        train_df.loc[train_df.sample(frac=0.05).index, col] = pd.NA
+
 train_df = train_df.fillna(np.nan)
 # Divide data into features and target
 X = train_df.drop('Status', axis=1)

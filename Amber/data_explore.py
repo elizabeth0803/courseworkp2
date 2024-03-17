@@ -5,7 +5,7 @@ import seaborn as sns
 #data explore
 
 # Load the dataset
-train_df = pd.read_csv('train.csv')
+train_df = pd.read_csv('../train.csv')
 
 # Display basic information and the first few rows of the dataset
 print(train_df.info())
@@ -32,6 +32,3 @@ for column in train_df.select_dtypes(include=['float64', 'int64']).columns:
 sns.pairplot(train_df, hue='Status')
 plt.show()
 
-# Simulate missing values in 5% of the dataset
-for col in train_df.columns:
-    train_df.loc[train_df.sample(frac=0.05).index, col] = pd.NA
