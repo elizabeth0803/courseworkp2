@@ -6,13 +6,13 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.base import BaseEstimator, TransformerMixin
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Input, Dense
-from tensorflow.keras.optimizers import Adam
 from sklearn.experimental import enable_iterative_imputer
 from sklearn.impute import IterativeImputer
 from sklearn.ensemble import RandomForestRegressor
 
+
+
+# dadadfdfds
 #Three methods of handling missing values
 # Load the dataset
 train_df = pd.read_csv('train.csv')
@@ -95,13 +95,13 @@ numerical_transformer_iterative = Pipeline(steps=[
     ('scaler', StandardScaler())
 ])
 
-# applies iterative interpolation to numeric features
-preprocessor_3 = ColumnTransformer(
-    transformers=[
-        ('num', numerical_transformer_iterative, numerical_cols),
-        ('cat', categorical_transformer, categorical_cols)
-    ])
-
+# # applies iterative interpolation to numeric features
+# preprocessor_3 = ColumnTransformer(
+#     transformers=[
+#         ('num', numerical_transformer_iterative, numerical_cols),
+#         ('cat', categorical_transformer, categorical_cols)
+#     ])
+#
 
 
 # numerical feature -The mean value of each numerical feature column is used to fill in the missing values in that column.
