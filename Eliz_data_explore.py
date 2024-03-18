@@ -22,8 +22,7 @@ train_df, valid_df = train_test_split(
 train_labels = train_df['Status']
 valid_labels = valid_df['Status']
 
-#All categorical attributes have just Y and N which could be binary except
-# 'Edema' which has Y, N and S. And 'Drug' has two as well
+print("All categorical attributes have just Y and N which could be binary except 'Edema' which has Y, N and S (S only 334 value). And 'Drug' has two as well")
 
 df_d = train_df[train_df['Status'] == 'D'] 
 df_c = train_df[train_df['Status'] =='C']
